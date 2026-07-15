@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videojuego de Esquivar - Three.js</title>
+<style>
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    font-family: sans-serif; 
+}
+
+canvas { 
+    display: block; 
+}
+
+#marcador {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.buenas { 
+    color: #4CAF50; 
+    margin-right: 20px; 
+}
+
+.malas { 
+    color: #F44336; 
+    margin-right: 20px;
+}
+
+.monedas { 
+    color: #e6a800;
+    margin-right: 20px;
+}
+
+.vidas { 
+    color: #ff3333;
+}
+
+#gameover{
+    display:none;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color:white;
+    font-size:50px;
+    z-index:10;
+}
+</style>
+</head>
+<body>
+
+    <div id="gameover">
+    GAME OVER
+</div>
+
+<div id="marcador">
+
+    <span class="monedas">
+        Monedas:
+        <span id="monedas-txt">0</span>
+    </span>
+
+    <span class="buenas">
+        Esquivados:
+        <span id="buenas-txt">0</span>
+    </span>
+
+    <span class="malas">
+        Impactos:
+        <span id="malas-txt">0</span>
+    </span>
+
+    <span class="vidas">
+    Vidas:
+    <span id="vidas-txt">3</span>
+</span>
+
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
