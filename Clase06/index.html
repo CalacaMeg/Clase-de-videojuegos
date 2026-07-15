@@ -46,6 +46,7 @@ canvas {
     color: #ff3333;
 }
 
+
 #gameover{
     display:none;
     position:absolute;
@@ -56,12 +57,23 @@ canvas {
     font-size:50px;
     z-index:10;
 }
+
+#reiniciar-btn{
+    display:block;
+    margin:20px auto;
+    padding:10px 20px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:8px;
+    border:none;
+}
 </style>
 </head>
 <body>
 
-    <div id="gameover">
+<div id="gameover">
     GAME OVER
+    <button id="reiniciar-btn">Reiniciar</button>
 </div>
 
 <div id="marcador">
