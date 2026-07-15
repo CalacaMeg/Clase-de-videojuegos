@@ -411,22 +411,27 @@ renderer.render(scene, camera);
 
 animate();
 
-
 function gameOver(){
 
     juegoTerminado = true;
 
-    document.getElementById("gameover").style.display = "block";
+    const pantalla = document.getElementById("gameover");
 
-    cancelAnimationFrame(animacion);
+    if(pantalla){
+        pantalla.style.display = "block";
+    } else {
+        console.error("No existe el div gameover");
+    }
 
 }
 
 const botonReiniciar = document.getElementById("reiniciar-btn");
 
-botonReiniciar.addEventListener("click", () => {
-    location.reload();
-});
+if(botonReiniciar){
+    botonReiniciar.addEventListener("click", () => {
+        location.reload();
+    });
+}
 
 
 // 6. AJUSTE DE PANTALLA
